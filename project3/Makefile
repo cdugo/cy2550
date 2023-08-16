@@ -17,7 +17,7 @@ move-binary-to-parent:
 	@echo "Moving binary to parent directory..."
 	mv src/target/release/$(BINARY_NAME) $(BINARY_NAME)
 
-build: release copy-data move-binary-to-parent
+build: copy-data move-binary-to-parent
 
 # clean:
 # 	@echo "Cleaning up..."
