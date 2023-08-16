@@ -3,10 +3,7 @@ DATA_FILE=words.txt
 
 all: release
 	
-release:
-	@echo "Building $(BINARY_NAME)..."
-	@cd src && cargo build --release
-	@echo "$(BINARY_NAME) built successfully."
+release: copy-data move-binary-to-parent
 
 copy-data:
 	@echo "Copying $(DATA_FILE) to src/target/release..."
