@@ -6,6 +6,8 @@ all: release
 release: copy-data move-binary-to-parent
 
 copy-data:
+	@echo "Ensuring src/target/release/ exists..."
+	@mkdir -p src/target/release/
 	@echo "Copying $(DATA_FILE) to src/target/release..."
 	@cp $(DATA_FILE) src/target/release/
 	@echo "$(DATA_FILE) copied successfully."
